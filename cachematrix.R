@@ -40,7 +40,7 @@ cacheSolve <- function(mat=matrix()) {
     return(gInv)          ## if exists in cache, return it and exit
   }
   mat <- x$get()          ## get matrix from cache
-  inv <- solve(matrix)    ## calc matrix global env inv
+  inv <- solve(mat)    ## calc matrix global env inv
   x$setmatrix(gInv)       ## set cache to global env
-  gInv                    ## return global env
+  gInv                    ## return global env inv
 }
